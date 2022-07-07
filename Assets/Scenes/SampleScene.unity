@@ -267,7 +267,7 @@ Transform:
   - {fileID: 1005976645}
   - {fileID: 1557284406}
   m_Father: {fileID: 0}
-  m_RootOrder: 4
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!54 &696695956
 Rigidbody:
@@ -417,6 +417,10 @@ PrefabInstance:
     - target: {fileID: 1807791822870148086, guid: f3e70e235fff7fe458caf9f588c8263b, type: 3}
       propertyPath: m_Name
       value: Route
+      objectReference: {fileID: 0}
+    - target: {fileID: 1807791822870148086, guid: f3e70e235fff7fe458caf9f588c8263b, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3250697434890618153, guid: f3e70e235fff7fe458caf9f588c8263b, type: 3}
       propertyPath: m_RootOrder
@@ -864,7 +868,7 @@ MonoBehaviour:
   invalidTeleportColor: {r: 1, g: 0, b: 0, a: 1}
   teleportableLayers:
     serializedVersion: 2
-    m_Bits: 512
+    m_Bits: 64
   maxTargetSurfaceAngle: 10
   velocity: 5
   gravity: 25
@@ -1196,7 +1200,7 @@ Transform:
   m_LocalScale: {x: 1, y: 2, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 5
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1557284397
 PrefabInstance:

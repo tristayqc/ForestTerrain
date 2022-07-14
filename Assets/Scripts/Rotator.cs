@@ -7,6 +7,13 @@ public class Rotator : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        transform.Rotate(0f, 70 * Time.deltaTime, 0f,  Space.Self);
+        if (gameObject.CompareTag("mushroom"))
+        {
+            transform.Rotate(0f, 0f, 70 * Time.deltaTime, Space.Self);
+        }
+        else
+        {
+            transform.Rotate(0f, 70 * Time.deltaTime, 0f, Space.Self);
+        }
     }
 }

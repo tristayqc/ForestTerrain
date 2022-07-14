@@ -7,6 +7,7 @@ TagManager:
   - Pickable
   - Cube
   - Fracture
+  - mushroom
   layers:
   - Default
   - TransparentFX

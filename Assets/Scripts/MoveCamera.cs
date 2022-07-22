@@ -9,15 +9,14 @@ public class MoveCamera : MonoBehaviour
     public float desiredHeight = 5f;
     private Vector3 curPos;
     private Vector3 rotateValue = new Vector3(0, 0, 0);
-    //May delete: private Rigidbody rb;
+    public Transform startPos;
 
     private void Start()
     {
-        curPos = transform.position;
+        transform.position = startPos.position;
+        curPos = startPos.position;
         curPos.y = Terrain.activeTerrain.SampleHeight(transform.position) + desiredHeight;
         transform.position = curPos;
-        
-        //May delete: rb = GetComponent<Rigidbody>();
     }
 
     // Update is called once per frame
@@ -34,9 +33,7 @@ public class MoveCamera : MonoBehaviour
         }
        
         if (moveVector.x != 0 || moveVector.z != 0)
-        {
-            //May delete: rb.position += moveVector * speed * Time.deltaTime;
-            
+        {   
             transform.position += speed * moveVector * Time.deltaTime;
             curPos = transform.position;
             curPos.y = Terrain.activeTerrain.SampleHeight(transform.position);

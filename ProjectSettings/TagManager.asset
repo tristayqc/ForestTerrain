@@ -7,7 +7,8 @@ TagManager:
   - Pickable
   - Cube
   - Fracture
-  - mushroom
+  - defaultTrigger
+  - reversedTrigger
   layers:
   - Default
   - TransparentFX

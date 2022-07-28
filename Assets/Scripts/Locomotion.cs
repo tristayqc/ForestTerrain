@@ -13,11 +13,16 @@ namespace VarjoExample
         public Transform bodyTracker;
         [Header("Use controller.primaryButton to move")]
         public float moveSpeed = 1.80f;
+        public float desiredHeight = 5f;
+        private Vector3 curPos;
 
         // Start is called before the first frame update
         void Start()
         {
             controller = GetComponent<Controller>();
+            curPos = xrRig.position;
+            curPos.y = Terrain.activeTerrain.SampleHeight(xrRig.position) + desiredHeight;
+            xrRig.position = curPos;
         }
 
         // Update is called once per frame
@@ -27,9 +32,13 @@ namespace VarjoExample
             {
                 // Head-based steering
                 //xrRig.transform.Translate(VectorYToZero(head.forward) * moveSpeed * Time.deltaTime, Space.World);
-                
+
                 // Body-based steering (Body rotation is tracked by a Vive Tracker)
-                xrRig.transform.Translate(ProjectToXZPlane(bodyTracker.up) * moveSpeed * Time.deltaTime, Space.World);
+                //Debug.Log(bodyTracker.forward);
+                xrRig.transform.Translate(ProjectToXZPlane(bodyTracker.forward) * moveSpeed * Time.deltaTime, Space.World);
+                curPos = xrRig.position;
+                curPos.y = Terrain.activeTerrain.SampleHeight(xrRig.position) + desiredHeight;
+                xrRig.position = curPos;
             }
 
         }

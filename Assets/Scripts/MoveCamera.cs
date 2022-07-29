@@ -9,14 +9,14 @@ public class MoveCamera : MonoBehaviour
     public float desiredHeight = 5f;
     private Vector3 curPos;
     private Vector3 rotateValue = new Vector3(0, 0, 0);
-    public Transform startPos;
+    //public Transform startPos;
 
     private void Start()
     {
-        transform.position = startPos.position;
+        /*transform.position = startPos.position;
         curPos = startPos.position;
         curPos.y = Terrain.activeTerrain.SampleHeight(transform.position) + desiredHeight;
-        transform.position = curPos;
+        transform.position = curPos;*/
     }
 
     // Update is called once per frame

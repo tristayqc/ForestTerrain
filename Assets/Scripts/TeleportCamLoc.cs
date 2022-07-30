@@ -5,6 +5,7 @@ using UnityEngine;
 public class TeleportCamLoc : MonoBehaviour
 {
     public Transform xrRig;
+    public Transform labStartPos;
     //public Transform head;
     //public Transform bodyTracker;
     [Header("Press T to teleport to this location")]
@@ -13,7 +14,7 @@ public class TeleportCamLoc : MonoBehaviour
 
     void Start()
     {
-        
+        xrRig.position = labStartPos.position;
     }
 
     // Update is called once per frame

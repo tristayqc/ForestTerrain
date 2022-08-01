@@ -14,7 +14,10 @@ public class TeleportCamLoc : MonoBehaviour
 
     void Start()
     {
-        xrRig.position = labStartPos.position;
+        Vector3 tempPos = labStartPos.position;
+        tempPos.y += desiredHeight;
+        xrRig.position = tempPos;
+        
     }
 
     // Update is called once per frame

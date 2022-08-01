@@ -12,9 +12,12 @@ namespace VarjoExample
         public Transform head;
         public Transform bodyTracker;
         [Header("Use controller.primaryButton to move")]
-        public float moveSpeed = 1.80f;
+        public float moveSpeed;
         public float desiredHeight;
         private Vector3 curPos;
+        [Header("Press T to teleport to this location")]
+        public Transform startPos;
+        private bool teleported;
 
 
         // Start is called before the first frame update
@@ -24,12 +27,21 @@ namespace VarjoExample
             /*curPos = startPos.position;
             curPos.y = Terrain.activeTerrain.SampleHeight(startPos.position) + desiredHeight;
             xrRig.position = curPos;*/
+            teleported = false;
         }
 
         // Update is called once per frame
         void Update()
         {
-            if (controller.primaryButton)
+            if (!teleported && Input.GetKeyDown(KeyCode.T))
+            {
+                Vector3 tempPos = startPos.position;
+                tempPos.y = Terrain.activeTerrain.SampleHeight(startPos.position)+ desiredHeight;
+                xrRig.position = tempPos;
+                teleported = true;
+            }
+
+            if (teleported && controller.primaryButton)
             {
                 // Head-based steering
                 //xrRig.transform.Translate(VectorYToZero(head.forward) * moveSpeed * Time.deltaTime, Space.World);

@@ -13,6 +13,7 @@ namespace VarjoExample
         public Transform bodyTracker;
         [Header("Use controller.primaryButton to move")]
         public float moveSpeed;
+        public Transform labStartPos;
         public float desiredHeight;
         private Vector3 curPos;
         [Header("Press T to teleport to this location")]
@@ -24,9 +25,9 @@ namespace VarjoExample
         void Start()
         {
             controller = GetComponent<Controller>();
-            /*curPos = startPos.position;
-            curPos.y = Terrain.activeTerrain.SampleHeight(startPos.position) + desiredHeight;
-            xrRig.position = curPos;*/
+            curPos = labStartPos.position;
+            curPos.y = Terrain.activeTerrain.SampleHeight(labStartPos.position);
+            xrRig.position = curPos;
             teleported = false;
         }
 

@@ -3028,7 +3028,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: "In this task, you will be teleported to the front of each landmarks and
     asked to point to where you believe the rest of the 5 landmarks are located.
-    \nPress the trigger button to point the direction."
+    \n\nPress the trigger button to start the task and also to point the direction
+    afterwards."
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -3905,7 +3906,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d8a07fcd42bf077439d24251e95b009d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  participantID: 
+  participantID: TianYu
   folderPath: 
   taskNum: 0
   fileName: 

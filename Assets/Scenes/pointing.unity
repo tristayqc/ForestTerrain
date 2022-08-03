@@ -278,7 +278,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: -49.598, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 608.76, y: 106.14}
+  m_AnchoredPosition: {x: 608.76, y: 106.36}
   m_SizeDelta: {x: 3, y: 1}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1001 &256575709
@@ -2497,6 +2497,7 @@ MonoBehaviour:
   head: {fileID: 963194228}
   bodyTracker: {fileID: 1005976645}
   moveSpeed: 5
+  labStartPos: {fileID: 0}
   desiredHeight: 1.8
   startPos: {fileID: 0}
 --- !u!120 &1557284408
@@ -3060,7 +3061,7 @@ MonoBehaviour:
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
   m_fontSizeMax: 72
-  m_fontStyle: 0
+  m_fontStyle: 1
   m_HorizontalAlignment: 2
   m_VerticalAlignment: 512
   m_textAlignment: 65535

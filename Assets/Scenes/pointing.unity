@@ -3906,7 +3906,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d8a07fcd42bf077439d24251e95b009d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  participantID: TianYu
+  participantID: 
   folderPath: 
   taskNum: 0
   fileName: 

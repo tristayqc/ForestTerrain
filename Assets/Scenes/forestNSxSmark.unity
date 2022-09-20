@@ -2520,8 +2520,8 @@ MonoBehaviour:
   CanvasTriggers:
   - {fileID: 2003618876}
   - {fileID: 997735351}
-  reversed: 1
-  startPoint: {fileID: 1809029877}
+  reversed: 0
+  startPoint: {fileID: 1509415983}
   xrRig: {fileID: 1526223056}
 --- !u!4 &617509130
 Transform:
